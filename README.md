@@ -1,7 +1,7 @@
 https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers
 https://github.com/rrunyon/accounts-react-rails-jsx/blob/master/app/assets/javascripts/components/record.js.jsx(JSX function version)
 
-###Initial steps:
+### Initial steps:
 
 ```shell
 1. rails new accounts
@@ -26,17 +26,17 @@ https://github.com/rrunyon/accounts-react-rails-jsx/blob/master/app/assets/javas
 14. bundle install
 ```
 
-###Knowledge:
+### Knowledge:
 1. With setState the current and previous states are merged. With replaceState, it throws out the current state, and replaces it with only what you provide. Usually setState is used unless you really need to remove keys for some reason; but setting them to false/null is usually a more explicit tactic. replaceState is lighter than setState
 
 2. Using defaultValue instead of value to set the initial input values, this is because using just value without onChange will end up creating read-only inputs.
 
-###Why:
+### Why:
 Q. Why do rails return “head :no_content” for JSON put request
 A. The purpose is to return a HTTP status code 200 with an empty body
 
 
-###Hint:
+### Hint:
 1. 	Error: Can't verify CSRF token authenticity
 	Problem: POST requests don't include the CSRF token required by Rails
 	Solution: Rails' jquery_ujs unobtrusive driver will include the CSRF token on every AJAX request.
