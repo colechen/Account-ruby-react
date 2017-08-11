@@ -56,3 +56,2277 @@ Migrating to CreateRecords (20170804090507)
   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 2', '2017-08-04', -100.0, '2017-08-04 09:15:30', '2017-08-04 09:15:30')[0m
   [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT  `records`.* FROM `records` LIMIT 11[0m
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecord Load (36.0ms)[0m  [1m[34mSELECT  `records`.* FROM `records` LIMIT 11[0m
+Started GET "/" for 127.0.0.1 at 2017-08-07 16:14:43 +0800
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (21.3ms)
+Completed 200 OK in 268ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Records" for 127.0.0.1 at 2017-08-07 16:14:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/Records"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:15:11 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (36.5ms)
+Completed 500 Internal Server Error in 8055ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/config
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/images
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/javascripts
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/stylesheets
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.3/lib/assets/compiled
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/node_modules
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/react-rails-2.2.1/lib/assets/react-source/development
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/react-rails-2.2.1/lib/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images):
+    4:     <title>Accounts</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4099253385569135885_70346642251660'
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:20:52 +0800
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.9ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 8049ms (Views: 8014.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:22:30 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 2739ms (Views: 2716.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:23:18 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 3832ms (Views: 3809.8ms | ActiveRecord: 1.8ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT  `records`.* FROM `records` LIMIT 11[0m
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:25:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 2861ms (Views: 2837.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:30:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 2071ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (4:14)
+  2 |   render() {
+  3 |     return (
+> 4 |       {console.log(this.props.records);}
+    |               ^
+  5 |       <h2>Records</h2>
+  6 |     );
+  7 |   }):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258178963960'
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:30:39 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 2327ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (4:14)
+  2 |   render() {
+  3 |     return (
+> 4 |       {console.log(this.props.records)}
+    |               ^
+  5 |       <h2>Records</h2>
+  6 |     );
+  7 |   }):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258179239480'
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:30:52 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 2012ms (Views: 2005.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:53:25 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 3453ms (ActiveRecord: 29.2ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Adjacent JSX elements must be wrapped in an enclosing tag (9:6)
+   7 |     return (
+   8 |       <h2 className='title'>Records</h2>
+>  9 |       <table className='table table-bordered'>
+     |       ^
+  10 |         <thead>
+  11 |           <tr>
+  12 |             <th>Date</th>):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258175780440'
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:54:05 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 3934ms (Views: 3837.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 16:56:11 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 1675ms (Views: 1654.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 17:03:39 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 2598ms (Views: 2576.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 17:03:46 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 89ms (Views: 85.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 17:19:46 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 491ms (Views: 434.7ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-07 17:22:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 4903ms (Views: 4883.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:44:09 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.2ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (71.5ms)
+Completed 500 Internal Server Error in 2455ms (ActiveRecord: 52.6ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (17:3)
+  15 |     var value = e.target.value;
+  16 |     this.setState({name: value});
+> 17 |   }.bind(this)
+     |    ^
+  18 |   render() {
+  19 |     <form className='form-inline'>
+  20 |       <div className='form-group'>):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258177026760'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:50:18 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (48.9ms)
+Completed 500 Internal Server Error in 2739ms (ActiveRecord: 36.1ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Assigning to rvalue (9:4)
+   7 |       amount: ''
+   8 |     }
+>  9 |     this.handleChange() = this.handleChange.bind(this);
+     |     ^
+  10 |   }
+  11 |   valid() {
+  12 |     return (this.state.title && this.state.date && this.state.amount);):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258159180360'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:51:58 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 2875ms (Views: 2803.5ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:52:17 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 2844ms (Views: 2823.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:53:44 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 3364ms (Views: 3221.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:54:25 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 3541ms (Views: 3519.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:55:12 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 3645ms (Views: 3476.9ms | ActiveRecord: 90.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 11:59:20 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 3340ms (Views: 3281.4ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:01:46 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 3417ms (Views: 3356.9ms | ActiveRecord: 40.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:02:52 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 1605ms (Views: 1598.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:03:42 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1525ms (Views: 1518.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:07:57 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 3610ms (Views: 3490.7ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:08:28 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 2388ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Identifier directly after number (8:62)
+   6 |   render() {
+   7 |     return (
+>  8 |       <div className='panel panel-primary' style={{padding: 10px 30px 0px 30px}}>
+     |                                                               ^
+   9 |         <div className='panel-heading'>
+  10 |           <h3 className='panel-title'>Account</h3>
+  11 |         </div>):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258157800000'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:08:52 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 1247ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (8:63)
+   6 |   render() {
+   7 |     return (
+>  8 |       <div className='panel panel-primary' style={{padding: 10 30 0 30}}>
+     |                                                                ^
+   9 |         <div className='panel-heading'>
+  10 |           <h3 className='panel-title'>Account</h3>
+  11 |         </div>):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258104627120'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:11:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 4775ms (Views: 4725.5ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:14:20 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (42.5ms)
+Completed 500 Internal Server Error in 3602ms (ActiveRecord: 30.9ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (8:13)
+   6 |   render() {
+   7 |     const styleObj = {
+>  8 |       padding-left: 30;
+     |              ^
+   9 |       padding-right: 30;
+  10 |     };
+  11 |     return ():
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258105878440'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:14:37 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 2514ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (8:21)
+   6 |   render() {
+   7 |     const styleObj = {
+>  8 |       paddingLeft: 30;
+     |                      ^
+   9 |       paddingRight: 30;
+  10 |     };
+  11 |     return ():
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258175081040'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:14:55 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 2243ms (Views: 2235.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:15:31 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 2296ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (8:18)
+   6 |   render() {
+   7 |     const styleObj = {
+>  8 |       padding: 30 30 30 30
+     |                   ^
+   9 |     };
+  10 |     return (
+  11 |       <div style={styleObj} >):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258147899400'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:15:47 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 2044ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (8:20)
+   6 |   render() {
+   7 |     const styleObj = {
+>  8 |       padding: 30,30,30,30
+     |                     ^
+   9 |     };
+  10 |     return (
+  11 |       <div style={styleObj} >):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258104951400'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:16:12 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 3036ms (Views: 3015.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:17:41 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 3660ms (Views: 3626.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:18:19 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 1744ms (Views: 1737.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:18:51 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 2332ms (Views: 2323.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:18:57 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 1721ms (Views: 1712.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:19:12 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 114ms (Views: 106.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:19:24 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 125ms (Views: 122.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:25:40 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.2ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 3287ms (Views: 3233.6ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:26:32 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 1627ms (Views: 1619.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:27:07 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 2089ms (Views: 2081.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:28:33 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (44.9ms)
+Completed 500 Internal Server Error in 2309ms (ActiveRecord: 34.2ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Expected corresponding JSX closing tag for <hr> (37:10)
+  35 |               </tbody>
+  36 |             </table>
+> 37 |           </div>
+     |           ^
+  38 |         </div>
+  39 |       </div>
+  40 |     );):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3111749827460790225_70258171979420'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:28:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 289ms (Views: 279.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:29:19 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 3450ms (Views: 3442.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:29:30 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 1702ms (Views: 1692.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:29:44 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 2092ms (Views: 2069.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:36:33 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 3898ms (Views: 3791.4ms | ActiveRecord: 34.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:37:07 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 3021ms (Views: 2999.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:38:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 3466ms (Views: 3339.8ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 12:38:20 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 2171ms (Views: 2163.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 15:31:50 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 5995ms (Views: 5923.4ms | ActiveRecord: 51.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 15:34:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 2985ms (Views: 2924.7ms | ActiveRecord: 41.1ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 15:34:40 +0800
+Processing by RecordsController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:106:in `block in run_callbacks'
+react-rails (2.2.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (5.1.3) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+activesupport (5.1.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/records" for 127.0.0.1 at 2017-08-08 15:35:24 +0800
+Processing by RecordsController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:106:in `block in run_callbacks'
+react-rails (2.2.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (5.1.3) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+activesupport (5.1.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 15:37:30 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 3218ms (Views: 3146.4ms | ActiveRecord: 49.3ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 15:37:49 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record3", "date"=>"2017-08-08", "amount"=>"100"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:106:in `block in run_callbacks'
+react-rails (2.2.1) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (5.1.3) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+activesupport (5.1.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 15:58:27 +0800
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (35.6ms)
+Completed 500 Internal Server Error in 1276ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery.turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/config
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/images
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/javascripts
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/app/assets/stylesheets
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.3/lib/assets/compiled
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/Cole/Factory/RubyFactory/Account-ruby-react/node_modules
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/react-rails-2.2.1/lib/assets/react-source/development
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/react-rails-2.2.1/lib/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/Cole/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images):
+    4:     <title>Accounts</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:20
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3537039881262844381_70118651062560'
+Started GET "/records" for 127.0.0.1 at 2017-08-08 15:59:35 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 1908ms (Views: 1874.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 15:59:47 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record3", "date"=>"2017-08-08", "amount"=>"100"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record3', '2017-08-08', 100.0, '2017-08-08 07:59:47', '2017-08-08 07:59:47')[0m
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 36ms (Views: 0.5ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 16:08:53 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 605ms (Views: 592.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 16:09:09 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-09", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-09', 1000.0, '2017-08-08 08:09:09', '2017-08-08 08:09:09')[0m
+  [1m[35m (70.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 81ms (Views: 0.6ms | ActiveRecord: 70.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 16:09:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 4700ms (Views: 4616.7ms | ActiveRecord: 28.6ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 16:10:07 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 5", "date"=>"2017-08-09", "amount"=>"-50"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 5', '2017-08-09', -50.0, '2017-08-08 08:10:07', '2017-08-08 08:10:07')[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 33ms (Views: 1.8ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 16:11:17 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 2893ms (Views: 2869.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 16:11:29 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 6", "date"=>"2017-08-09", "amount"=>"20"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 6', '2017-08-09', 20.0, '2017-08-08 08:11:29', '2017-08-08 08:11:29')[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 57ms (Views: 0.6ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 16:17:43 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 3367ms (Views: 3318.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 16:17:58 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 7", "date"=>"2017-08-09", "amount"=>"50"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 7', '2017-08-09', 50.0, '2017-08-08 08:17:58', '2017-08-08 08:17:58')[0m
+  [1m[35m (55.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 60ms (Views: 0.8ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-08 16:22:10 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 2943ms (Views: 2921.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-08 16:22:32 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 8", "date"=>"2017-08-09", "amount"=>"10"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 8', '2017-08-09', 10.0, '2017-08-08 08:22:32', '2017-08-08 08:22:32')[0m
+  [1m[35m (113.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 121ms (Views: 0.9ms | ActiveRecord: 113.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 13:47:25 +0800
+  [1m[35m (44.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 11386ms (Views: 11329.1ms | ActiveRecord: 32.7ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 13:47:54 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 9", "date"=>"2017-08-10", "amount"=>"5000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.8ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 9', '2017-08-10', 5000.0, '2017-08-09 05:47:54', '2017-08-09 05:47:54')[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 72ms (Views: 2.3ms | ActiveRecord: 64.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 13:49:27 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 116ms (Views: 113.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 13:49:48 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 10", "date"=>"2017-08-10", "amount"=>"30"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 10', '2017-08-10', 30.0, '2017-08-09 05:49:48', '2017-08-09 05:49:48')[0m
+  [1m[35m (57.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 63ms (Views: 1.3ms | ActiveRecord: 58.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:21:33 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.2ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (99.9ms)
+Completed 500 Internal Server Error in 4470ms (ActiveRecord: 77.4ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (16:75)
+  14 |   }
+  15 |   credits() {
+> 16 |     var credit = this.state.records.filter((record) => record.amount >= 0 ));
+     |                                                                            ^
+  17 |     return credit.reduce((prev, curr) => (prev+parseFloat(curr)),0);
+  18 |   }
+  19 |   debits() {):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3789742801769345439_70177361190380'
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:22:23 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 3202ms (Views: 3176.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:23:39 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (146.4ms)
+Completed 200 OK in 1757ms (Views: 1618.7ms | ActiveRecord: 131.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:25:04 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 2139ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: JSX value should be either an expression or a quoted JSX text (8:23)
+   6 |     return (
+   7 |       <div className="col-md-4">
+>  8 |         <div className=`panel panel-#{this.props.type}`>
+     |                        ^
+   9 |           <div className="panel-heading">{this.props.text}</div>
+  10 |           <div className="panel-body">{amountFormat(this.props.amount)}</div>
+  11 |         </div>):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3789742801769345439_70177448581280'
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:25:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 3130ms (Views: 3070.3ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 14:26:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 3204ms (Views: 3146.5ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:33:53 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 5122ms (Views: 4957.8ms | ActiveRecord: 121.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:35:25 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 3049ms (Views: 2993.7ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:36:03 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 3234ms (Views: 3181.2ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:37:04 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 2894ms (Views: 2828.2ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:37:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 2524ms (Views: 2469.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:37:59 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 2381ms (Views: 2319.8ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:38:20 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 1870ms (Views: 1800.2ms | ActiveRecord: 63.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:40:58 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 148ms (Views: 141.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:43:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 2981ms (Views: 2921.0ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:44:14 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 3030ms (Views: 3009.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:45:06 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (87.7ms)
+Completed 200 OK in 2336ms (Views: 2253.5ms | ActiveRecord: 75.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:45:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 1736ms (Views: 1728.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:46:06 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 1747ms (Views: 1739.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:46:24 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 1712ms (Views: 1701.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:54:08 +0800
+  
+SyntaxError (/Users/Cole/Factory/RubyFactory/Account-ruby-react/app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:54:24 +0800
+  
+SyntaxError (/Users/Cole/Factory/RubyFactory/Account-ruby-react/app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:54:25 +0800
+  
+SyntaxError (/Users/Cole/Factory/RubyFactory/Account-ruby-react/app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/records_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:55:21 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 3423ms (Views: 3363.4ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 15:55:45 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 2045ms (Views: 2023.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:15:53 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 4834ms (Views: 4766.8ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:16:26 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 1083ms (Views: 1011.2ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:16:44 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 3218ms (Views: 3197.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:17:05 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 1986ms (Views: 1978.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/records/" for 127.0.0.1 at 2017-08-09 16:17:12 +0800
+  
+ActionController::RoutingError (No route matches [DELETE] "/records"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:18:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 1781ms (Views: 1773.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/records/10" for 127.0.0.1 at 2017-08-09 16:18:14 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mRecord Load (27.8ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 10 LIMIT 1[0m
+Completed 500 Internal Server Error in 396ms (ActiveRecord: 27.8ms)
+
+
+  
+NoMethodError (undefined method `destory' for #<Record:0x007fa6e83f0bb0>
+Did you mean?  destroy):
+  
+app/controllers/records_controller.rb:19:in `destroy'
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:22:28 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 101ms (Views: 94.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/records/10" for 127.0.0.1 at 2017-08-09 16:22:34 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 10 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (90.2ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 10[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 147ms (ActiveRecord: 142.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:23:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 3258ms (Views: 3189.9ms | ActiveRecord: 46.7ms)
+
+
+Started DELETE "/records/8" for 127.0.0.1 at 2017-08-09 16:23:25 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.5ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 8[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 59ms (ActiveRecord: 54.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:24:17 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (31.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 474ms (Views: 420.2ms | ActiveRecord: 33.0ms)
+
+
+Started DELETE "/records/6" for 127.0.0.1 at 2017-08-09 16:24:21 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 6[0m
+  [1m[35m (140.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 144ms (ActiveRecord: 141.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:26:37 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 3375ms (Views: 3350.7ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/records/4" for 127.0.0.1 at 2017-08-09 16:26:43 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.3ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 4[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 47ms (ActiveRecord: 42.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:28:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 1667ms (Views: 1659.6ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/records/7" for 127.0.0.1 at 2017-08-09 16:28:41 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 7[0m
+  [1m[35m (55.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 60ms (ActiveRecord: 56.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:30:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 2570ms (Views: 2562.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/records/3" for 127.0.0.1 at 2017-08-09 16:30:22 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 3[0m
+  [1m[35m (95.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 100ms (ActiveRecord: 96.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:30:43 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 1745ms (Views: 1709.4ms | ActiveRecord: 31.3ms)
+
+
+Started DELETE "/records/5" for 127.0.0.1 at 2017-08-09 16:30:48 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.0ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 5[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 53ms (ActiveRecord: 47.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:32:44 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 2900ms (Views: 2849.6ms | ActiveRecord: 30.4ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 16:33:00 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (54.0ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 08:33:00', '2017-08-09 08:33:00')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 60ms (Views: 0.5ms | ActiveRecord: 55.0ms)
+
+
+Started DELETE "/records/11" for 127.0.0.1 at 2017-08-09 16:33:10 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 11 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 11[0m
+  [1m[35m (63.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 68ms (ActiveRecord: 65.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:36:45 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 3039ms (Views: 2973.1ms | ActiveRecord: 43.6ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 16:37:04 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.7ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 08:37:04', '2017-08-09 08:37:04')[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 74ms (Views: 0.9ms | ActiveRecord: 67.9ms)
+
+
+Started DELETE "/records/12" for 127.0.0.1 at 2017-08-09 16:37:09 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (83.0ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 12[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 88ms (ActiveRecord: 84.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:40:24 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 4195ms (Views: 4098.0ms | ActiveRecord: 74.5ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 16:40:38 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 7", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (67.2ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 7', '2017-08-10', 1000.0, '2017-08-09 08:40:38', '2017-08-09 08:40:38')[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 117ms (Views: 1.2ms | ActiveRecord: 111.2ms)
+
+
+Started DELETE "/records/13" for 127.0.0.1 at 2017-08-09 16:40:41 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"13"}
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 13[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:44:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (84.7ms)
+Completed 200 OK in 4864ms (Views: 4772.4ms | ActiveRecord: 71.1ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 16:44:50 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.8ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 08:44:50', '2017-08-09 08:44:50')[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 71ms (Views: 1.0ms | ActiveRecord: 65.6ms)
+
+
+Started DELETE "/records/14" for 127.0.0.1 at 2017-08-09 16:44:52 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 14[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 16:45:17 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 2839ms (Views: 2803.3ms | ActiveRecord: 30.0ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 16:45:28 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (55.9ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 08:45:28', '2017-08-09 08:45:28')[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 87ms (Views: 1.2ms | ActiveRecord: 80.7ms)
+
+
+Started DELETE "/records/15" for 127.0.0.1 at 2017-08-09 16:45:29 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 15[0m
+  [1m[35m (66.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 70ms (ActiveRecord: 67.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 17:09:53 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 3215ms (Views: 3128.0ms | ActiveRecord: 50.6ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 17:10:04 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (59.4ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 09:10:04', '2017-08-09 09:10:04')[0m
+  [1m[35m (24.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 91ms (Views: 0.9ms | ActiveRecord: 83.9ms)
+
+
+Started DELETE "/records/16" for 127.0.0.1 at 2017-08-09 17:10:05 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 16[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 17:31:38 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (160.8ms)
+Completed 200 OK in 4660ms (Views: 4471.6ms | ActiveRecord: 149.0ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 17:31:53 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (61.6ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 09:31:53', '2017-08-09 09:31:53')[0m
+  [1m[35m (64.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 132ms (Views: 0.6ms | ActiveRecord: 126.3ms)
+
+
+Started DELETE "/records/17" for 127.0.0.1 at 2017-08-09 17:31:55 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 17 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 17[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 31ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-09 17:32:43 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 2755ms (Views: 2744.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2017-08-09 17:40:44 +0800
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Record 4", "date"=>"2017-08-10", "amount"=>"1000"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (50.7ms)[0m  [1m[32mINSERT INTO `records` (`title`, `date`, `amount`, `created_at`, `updated_at`) VALUES ('Record 4', '2017-08-10', 1000.0, '2017-08-09 09:40:44', '2017-08-09 09:40:44')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 59ms (Views: 1.9ms | ActiveRecord: 52.0ms)
+
+
+Started DELETE "/records/18" for 127.0.0.1 at 2017-08-09 17:40:46 +0800
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 18 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.8ms)[0m  [1m[31mDELETE FROM `records` WHERE `records`.`id` = 18[0m
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 48ms (ActiveRecord: 44.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:42:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 2472ms (ActiveRecord: 40.9ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (78:11)
+  76 |   render() {
+  77 |     return (
+> 78 |       {this.state.edit ? this.renderForm() : this.renderRow()}
+     |            ^
+  79 |     );
+  80 |   }
+  81 | }):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3789742801769345439_70177410677040'
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:48:49 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 4480ms (Views: 4418.5ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:49:35 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 2231ms (Views: 2155.9ms | ActiveRecord: 67.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:53:31 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 3019ms (Views: 2947.4ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:54:54 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 3220ms (Views: 3178.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:57:34 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (42.1ms)
+Completed 500 Internal Server Error in 3810ms (ActiveRecord: 31.3ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (48:49)
+  46 |       <tr>
+  47 |         <td><input className='form-control'
+> 48 |                 ref={(input) => this.date = input;}
+     |                                                  ^
+  49 |                 type='text' defaultValue={this.props.record.date} /></td>
+  50 |         <td><input className='form-control'
+  51 |                 ref={(input) => this.title = input;}):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3789742801769345439_70177411593480'
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:57:58 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1968ms (Views: 1959.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 21:58:42 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1710ms (Views: 1702.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:09:27 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 3468ms (Views: 3407.4ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:10:03 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 3204ms (Views: 3181.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:12:36 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 111ms (Views: 108.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:13:51 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:15:52 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 3144ms (Views: 3077.3ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:18:27 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 2396ms (Views: 2327.6ms | ActiveRecord: 48.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:21:39 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (106.4ms)
+Completed 200 OK in 4640ms (Views: 4526.8ms | ActiveRecord: 94.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:22:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 3651ms (Views: 3630.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:24:19 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 3132ms (Views: 3110.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:25:06 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 2517ms (Views: 2492.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:25:12 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 94ms (Views: 91.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:25:28 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 3248ms (Views: 3227.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:26:54 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 759ms (Views: 734.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:28:03 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 2528ms (Views: 2521.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:34:13 +0800
+  [1m[35m (27.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 2389ms (Views: 2332.5ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:34:43 +0800
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 4193ms (Views: 4171.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:41:05 +0800
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (89.1ms)
+Completed 200 OK in 3498ms (Views: 3423.7ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:41:21 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[35m (16.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecord Load (31.8ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 220ms (Views: 168.1ms | ActiveRecord: 48.3ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:45:31 +0800
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 2017ms (Views: 1965.1ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:46:26 +0800
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 4403ms (Views: 4380.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:49:36 +0800
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (54.0ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (158.5ms)
+Completed 200 OK in 2289ms (Views: 2163.4ms | ActiveRecord: 96.2ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:50:38 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 983ms (Views: 961.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:53:24 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (222.8ms)
+Completed 200 OK in 4939ms (Views: 4670.9ms | ActiveRecord: 204.1ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 22:53:36 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-1000"}, "id"=>"2"}
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (124.4ms)[0m  [1m[33mUPDATE `records` SET `amount` = -1000.0, `updated_at` = '2017-08-10 14:53:36' WHERE `records`.`id` = 2[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 234ms (Views: 1.5ms | ActiveRecord: 142.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:54:41 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (129.6ms)
+Completed 200 OK in 503ms (Views: 381.3ms | ActiveRecord: 116.4ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 22:56:09 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 3028ms (Views: 2952.0ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:04:56 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (417.7ms)
+Completed 200 OK in 9666ms (Views: 9133.4ms | ActiveRecord: 405.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:06:47 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 3092ms (Views: 3067.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:08:27 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 2746ms (Views: 2723.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:10:09 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 2938ms (Views: 2917.8ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:10:19 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-100"}, "id"=>"2"}
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (78.2ms)[0m  [1m[33mUPDATE `records` SET `amount` = -100.0, `updated_at` = '2017-08-10 15:10:19' WHERE `records`.`id` = 2[0m
+  [1m[35m (49.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 138ms (Views: 1.5ms | ActiveRecord: 127.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:11:08 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 3140ms (Views: 3076.9ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:11:19 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-1000"}, "id"=>"2"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (76.0ms)[0m  [1m[33mUPDATE `records` SET `amount` = -1000.0, `updated_at` = '2017-08-10 15:11:19' WHERE `records`.`id` = 2[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 100ms (Views: 1.1ms | ActiveRecord: 92.9ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:12:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 2789ms (Views: 2767.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:12:26 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-100"}, "id"=>"2"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (66.5ms)[0m  [1m[33mUPDATE `records` SET `amount` = -100.0, `updated_at` = '2017-08-10 15:12:26' WHERE `records`.`id` = 2[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 98ms (Views: 1.3ms | ActiveRecord: 91.0ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:12:38 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"$-1000"}, "id"=>"2"}
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `records` SET `amount` = 0.0, `updated_at` = '2017-08-10 15:12:38' WHERE `records`.`id` = 2[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 56ms (Views: 0.9ms | ActiveRecord: 51.5ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:13:16 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 1076ms (Views: 976.5ms | ActiveRecord: 80.3ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:13:28 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"$-1000"}, "id"=>"2"}
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.8ms)[0m  [1m[33mUPDATE `records` SET `amount` = 0.0, `updated_at` = '2017-08-10 15:13:28' WHERE `records`.`id` = 2[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 57ms (Views: 1.2ms | ActiveRecord: 51.3ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:14:13 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-1000"}, "id"=>"2"}
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.8ms)[0m  [1m[33mUPDATE `records` SET `amount` = -1000.0, `updated_at` = '2017-08-10 15:14:13' WHERE `records`.`id` = 2[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 160ms (Views: 0.9ms | ActiveRecord: 122.8ms)
+
+
+Started GET "/records" for 127.0.0.1 at 2017-08-10 23:14:21 +0800
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT `records`.* FROM `records`[0m
+  Rendered records/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 990ms (Views: 987.1ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/records/2" for 127.0.0.1 at 2017-08-10 23:14:30 +0800
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"title"=>"Record 2", "date"=>"2017-08-04", "amount"=>"-500"}, "id"=>"2"}
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT  `records`.* FROM `records` WHERE `records`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (105.4ms)[0m  [1m[33mUPDATE `records` SET `amount` = -500.0, `updated_at` = '2017-08-10 15:14:30' WHERE `records`.`id` = 2[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 113ms (Views: 1.1ms | ActiveRecord: 107.1ms)
+
+

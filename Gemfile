@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # additional gem
+gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'react-rails'
 gem 'mysql2'
